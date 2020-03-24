@@ -16,7 +16,7 @@ Run the following command, but change the environment variables first (COMMAND, 
 ```
 COMMAND='cd /directory/with/protractor/code && protractor' \
 PASSWORD='PASSWORD HERE' \
-PORT=27442 \
+PORT=RANDOM_PORT_HERE \
 OUTPUT_LOG_DIR=/tmp/bash-remote-executor-out \
 ./start.sh
 ```
