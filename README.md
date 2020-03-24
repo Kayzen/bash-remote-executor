@@ -7,7 +7,7 @@ To start run the following command, but change the environment variables first (
 COMMAND='cd /directory/with/protractor/code && protractor' \
 PASSWORD='PASSWORD HERE' \
 PORT=27442 \
-OUTPUT_LOG_DIR=/tmp/qa-automation-executor-out \
+OUTPUT_LOG_DIR=/tmp/bash-remote-executor-out \
 ./start.sh
 ```
 

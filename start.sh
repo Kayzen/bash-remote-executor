@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # build image
-docker build -t qa-automation-executor .
+docker build -t bash-remote-executor .
 
 # stop running container if there is one
-docker rm -f qa-automation-executor-container
+docker rm -f bash-remote-executor-container
 
 # create a directory for output logs
 mkdir -p "$OUTPUT_LOG_DIR"
@@ -16,5 +16,5 @@ docker run --env COMMAND="$COMMAND" \
            --mount type=bind,source="$OUTPUT_LOG_DIR",destination=/app/out \
            --restart always \
            --detach \
-           --name qa-automation-executor-container \
-           qa-automation-executor
+           --name bash-remote-executor-container \
+           bash-remote-executor

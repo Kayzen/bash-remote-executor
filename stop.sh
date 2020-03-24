@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker rm -f qa-automation-executor-container
+docker rm -f bash-remote-executor-container
