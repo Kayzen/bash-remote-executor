@@ -6,22 +6,30 @@ For example: http://123.234.34.56:27442/?password=123 can trigger a command `pro
 
 If another request is made while previous command is still running, that command will be forcefully stopped, so there is never two commands running at the same time
 
+Output of commands will be available in the `out` directory
+
 ### Prerequisites
 
-- Docker
+- NodeJS 12+
+
+### Install
+
+```
+npm install
+npm install -g pm2
+```
 
 ### To start
 
-Run the following command, but change the environment variables first (COMMAND, PASSWORD, PORT, OUTPUT_LOG_DIR):
+Run the following command, but change the environment variables first (COMMAND, PASSWORD, PORT):
 ```
 COMMAND='cd /directory/with/protractor/code && protractor' \
 PASSWORD='PASSWORD HERE' \
 PORT=RANDOM_PORT_HERE \
-OUTPUT_LOG_DIR=/tmp/bash-remote-executor-out \
-./start.sh
+pm2 start
 ```
 
 ### To stop
 ```
-./stop.sh
+pm2 delete all
 ```
